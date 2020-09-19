@@ -1,0 +1,306 @@
+"City","State","Total","Available","ICUs","Available_ICU"
+"Anchorage"," AK",1583,533,130,55
+"Tuscaloosa"," AL",1066,297,143,37
+"Montgomery"," AL",1225,461,131,61
+"Dothan"," AL",1335,504,108,33
+"Huntsville"," AL",1804,569,248,59
+"Mobile"," AL",2066,695,282,101
+"Birmingham"," AL",7297,2756,991,342
+"Texarkana"," AR",656,383,90,62
+"Fort Smith"," AR",931,487,87,55
+"Jonesboro"," AR",975,403,76,23
+"Springdale"," AR",1144,616,135,73
+"Little Rock"," AR",4854,2174,520,177
+"Sun City"," AZ",845,364,119,81
+"Mesa"," AZ",2091,648,291,108
+"Tucson"," AZ",2677,1184,335,161
+"Phoenix"," AZ",6977,2567,957,416
+"Santa Cruz"," CA",359,169,22,6
+"San Luis Obispo"," CA",390,202,54,33
+"Napa"," CA",456,152,70,41
+"Chico"," CA",537,153,51,23
+"Salinas"," CA",740,290,70,37
+"Redding"," CA",786,284,109,58
+"Santa Barbara"," CA",858,246,82,35
+"Stockton"," CA",918,329,121,41
+"Palm Springs/Rancho Mira"," CA",974,404,69,23
+"Ventura"," CA",1087,278,163,94
+"Santa Rosa"," CA",1272,306,93,45
+"Modesto"," CA",1478,467,118,44
+"San Mateo County"," CA",1555,452,198,88
+"Contra Costa County"," CA",1727,675,203,81
+"Fresno"," CA",1935,547,205,77
+"Bakersfield"," CA",2429,692,191,88
+"San Jose"," CA",2547,916,341,146
+"Alameda County"," CA",2695,665,293,139
+"San Francisco"," CA",3776,1139,439,203
+"Sacramento"," CA",4381,1315,616,224
+"San Bernardino"," CA",5691,2125,690,231
+"Orange County"," CA",5813,2236,690,293
+"San Diego"," CA",6178,1949,802,358
+"Los Angeles"," CA",19492,6594,2415,942
+"Pueblo"," CO",615,238,28,7
+"Boulder"," CO",640,297,90,43
+"Grand Junction"," CO",696,321,75,33
+"Fort Collins"," CO",704,341,31,14
+"Greeley"," CO",792,396,79,28
+"Colorado Springs"," CO",1295,555,149,62
+"Denver"," CO",5593,2269,843,325
+"Bridgeport"," CT",1354,370,132,65
+"New Haven"," CT",2825,610,286,118
+"Hartford"," CT",2855,751,323,115
+"Washington"," DC",5055,1595,601,218
+"Wilmington"," DE",1845,601,237,62
+"Bradenton"," FL",822,342,104,49
+"Ormond Beach"," FL",872,359,158,63
+"Ocala"," FL",902,289,150,51
+"Lakeland"," FL",1046,382,103,57
+"Hudson"," FL",1188,329,160,45
+"Sarasota"," FL",1309,604,159,77
+"St. Petersburg"," FL",1424,613,139,33
+"Clearwater"," FL",1571,719,160,44
+"Gainesville"," FL",1834,469,303,88
+"Pensacola"," FL",2001,755,230,91
+"Tallahassee"," FL",2242,603,193,50
+"Fort Myers"," FL",3115,1089,268,97
+"Tampa"," FL",4005,1289,515,165
+"Jacksonville"," FL",4947,1625,618,183
+"Fort Lauderdale"," FL",7323,2753,908,292
+"Miami"," FL",9139,2952,981,280
+"Orlando"," FL",10004,3292,1284,448
+"Albany"," GA",704,221,60,27
+"Rome"," GA",733,229,74,16
+"Columbus"," GA",1105,547,75,33
+"Savannah"," GA",2050,650,163,55
+"Augusta"," GA",2194,831,349,106
+"Macon"," GA",2295,865,240,57
+"Atlanta"," GA",12780,3338,1621,436
+"Honolulu"," HI",2623,795,219,73
+"Mason City"," IA",470,239,18,6
+"Dubuque"," IA",518,228,18,8
+"Waterloo"," IA",668,340,36,19
+"Cedar Rapids"," IA",799,364,44,22
+"Sioux City"," IA",909,362,59,23
+"Iowa City"," IA",1414,538,147,64
+"Davenport"," IA",1614,699,139,66
+"Des Moines"," IA",2760,1193,173,76
+"Idaho Falls"," ID",492,269,44,24
+"Boise"," ID",1773,848,186,95
+"Bloomington"," IL",394,201,35,10
+"Aurora"," IL",527,286,55,25
+"Hinsdale"," IL",1041,402,172,89
+"Urbana"," IL",1047,480,99,54
+"Elgin"," IL",1239,475,142,67
+"Rockford"," IL",1320,613,199,96
+"Joliet"," IL",1376,662,149,53
+"Peoria"," IL",1725,643,156,71
+"Evanston"," IL",2032,666,332,137
+"Blue Island"," IL",2053,583,308,118
+"Springfield"," IL",2426,1172,213,79
+"Melrose Park"," IL",2902,1122,334,137
+"Chicago"," IL",7764,3161,912,312
+"Muncie"," IN",377,129,36,8
+"Lafayette"," IN",457,193,34,14
+"Terre Haute"," IN",468,207,64,37
+"South Bend"," IN",1273,551,148,70
+"Gary"," IN",1434,638,179,95
+"Munster"," IN",1500,642,105,42
+"Evansville"," IN",2154,1050,328,157
+"Fort Wayne"," IN",2442,1038,376,143
+"Indianapolis"," IN",7441,3350,1081,403
+"Topeka"," KS",1304,594,112,49
+"Wichita"," KS",4590,2225,442,202
+"Owensboro"," KY",390,175,36,14
+"Covington"," KY",828,280,93,39
+"Paducah"," KY",1490,779,117,57
+"Louisville"," KY",4162,1700,506,165
+"Lexington"," KY",5045,2073,579,172
+"Slidell"," LA",536,338,137,70
+"Houma"," LA",707,399,65,32
+"Lake Charles"," LA",830,424,81,44
+"Metairie"," LA",857,406,111,44
+"Alexandria"," LA",917,402,43,20
+"Monroe"," LA",1064,561,102,36
+"Lafayette"," LA",1716,700,188,87
+"Shreveport"," LA",2468,1080,283,111
+"New Orleans"," LA",2491,869,313,77
+"Baton Rouge"," LA",2898,1159,249,119
+"Worcester"," MA",1525,425,169,43
+"Springfield"," MA",1588,500,195,73
+"Boston"," MA",10239,2548,1157,438
+"Salisbury"," MD",598,187,59,26
+"Takoma Park"," MD",1181,294,150,48
+"Baltimore"," MD",6931,1887,844,303
+"Bangor"," ME",1094,400,100,28
+"Portland"," ME",2524,710,209,92
+"St. Joseph"," MI",393,238,20,9
+"Petoskey"," MI",476,178,68,22
+"Muskegon"," MI",501,253,57,40
+"Marquette"," MI",601,276,47,18
+"Traverse City"," MI",756,293,26,7
+"Pontiac"," MI",911,321,95,49
+"Flint"," MI",1375,458,161,58
+"Dearborn"," MI",1439,462,188,95
+"Lansing"," MI",1444,632,240,115
+"Kalamazoo"," MI",1462,681,139,21
+"Saginaw"," MI",2396,962,208,63
+"Grand Rapids"," MI",2440,957,236,86
+"Royal Oak"," MI",2781,858,324,97
+"Ann Arbor"," MI",3014,876,406,122
+"Detroit"," MI",4123,1333,509,163
+"St. Cloud"," MN",898,227,45,16
+"Duluth"," MN",1319,508,217,73
+"St. Paul"," MN",1604,582,183,48
+"Rochester"," MN",1835,594,240,90
+"Minneapolis"," MN",6954,2458,612,238
+"Cape Girardeau"," MO",859,398,80,43
+"Joplin"," MO",1045,507,124,71
+"Columbia"," MO",1883,901,199,77
+"Springfield"," MO",2078,819,226,67
+"Kansas City"," MO",6736,2646,795,286
+"St. Louis"," MO",10187,4326,1180,547
+"Gulfport"," MS",609,287,80,40
+"Oxford"," MS",835,344,29,15
+"Meridian"," MS",1117,445,57,19
+"Hattiesburg"," MS",1546,504,85,30
+"Tupelo"," MS",1634,818,104,61
+"Jackson"," MS",4425,1964,406,149
+"Great Falls"," MT",937,367,50,27
+"Missoula"," MT",1002,455,79,39
+"Billings"," MT",2432,931,148,65
+"Hickory"," NC",603,253,64,25
+"Wilmington"," NC",1005,251,90,17
+"Greensboro"," NC",1224,362,135,47
+"Asheville"," NC",1541,556,232,76
+"Greenville"," NC",1977,631,339,115
+"Winston-Salem"," NC",2870,843,499,40
+"Raleigh"," NC",3560,1124,375,160
+"Durham"," NC",4505,1125,790,241
+"Charlotte"," NC",4873,1465,770,249
+"Minot"," ND",916,384,19,9
+"Grand Forks"," ND",952,374,31,18
+"Bismarck"," ND",970,422,80,43
+"Fargo/Moorhead MN"," ND",1872,734,180,48
+"Lincoln"," NE",2047,1016,116,33
+"Omaha"," NE",4017,1742,449,184
+"Lebanon"," NH",939,333,105,56
+"Manchester"," NH",1603,582,137,53
+"Ridgewood"," NJ",814,275,83,35
+"Paterson"," NJ",1164,527,84,12
+"Morristown"," NJ",1862,589,147,54
+"New Brunswick"," NJ",2177,616,213,126
+"Newark"," NJ",3636,1033,403,195
+"Hackensack"," NJ",3819,1057,175,98
+"Camden"," NJ",6527,2294,701,293
+"Albuquerque"," NM",2908,1102,380,161
+"Reno"," NV",1886,660,406,128
+"Las Vegas"," NV",4165,1088,761,162
+"Binghamton"," NY",1005,365,54,17
+"Elmira"," NY",1036,361,94,14
+"White Plains"," NY",2973,597,243,137
+"Syracuse"," NY",3062,950,243,77
+"Rochester"," NY",3766,827,289,87
+"Bronx"," NY",4012,807,282,115
+"Buffalo"," NY",4713,1228,323,95
+"Albany"," NY",4804,1579,425,193
+"East Long Island"," NY",9897,1230,928,235
+"Manhattan"," NY",14834,3059,1427,616
+"Elyria"," OH",453,214,63,21
+"Kettering"," OH",923,412,138,42
+"Akron"," OH",1358,518,186,94
+"Canton"," OH",1441,706,209,97
+"Youngstown"," OH",1555,543,158,66
+"Dayton"," OH",2070,749,294,89
+"Toledo"," OH",2679,1122,456,179
+"Cincinnati"," OH",3808,1537,567,185
+"Columbus"," OH",6449,2792,679,235
+"Cleveland"," OH",7233,2631,885,306
+"Lawton"," OK",733,346,76,32
+"Tulsa"," OK",4185,1783,486,159
+"Oklahoma City"," OK",5541,2447,582,225
+"Bend"," OR",415,182,38,17
+"Salem"," OR",487,154,64,10
+"Medford"," OR",855,369,72,25
+"Eugene"," OR",1208,416,138,64
+"Portland"," OR",4684,1737,661,278
+"Altoona"," PA",555,234,61,27
+"Sayre"," PA",591,215,62,28
+"Wilkes-Barre"," PA",651,263,102,24
+"Johnstown"," PA",741,426,44,25
+"Scranton"," PA",782,324,65,31
+"York"," PA",868,267,79,8
+"Lancaster"," PA",1081,468,98,40
+"Reading"," PA",1329,559,99,50
+"Danville"," PA",1664,510,171,33
+"Erie"," PA",1904,706,184,88
+"Harrisburg"," PA",2426,929,211,61
+"Allentown"," PA",3267,1267,334,143
+"Pittsburgh"," PA",8133,2738,1079,420
+"Philadelphia"," PA",10697,3634,1257,546
+"Providence"," RI",2249,690,293,82
+"Spartanburg"," SC",809,280,125,65
+"Florence"," SC",1248,481,224,79
+"Greenville"," SC",2217,798,282,41
+"Charleston"," SC",3013,975,329,101
+"Columbia"," SC",3026,1053,398,151
+"Rapid City"," SD",878,343,46,20
+"Sioux Falls"," SD",4065,1653,103,52
+"Johnson City"," TN",956,342,94,39
+"Jackson"," TN",1063,423,115,57
+"Kingsport"," TN",1485,668,185,75
+"Chattanooga"," TN",1928,651,247,59
+"Knoxville"," TN",3193,1198,299,74
+"Memphis"," TN",5054,2045,543,139
+"Nashville"," TN",7810,2987,1118,317
+"Longview"," TX",224,98,45,21
+"Wichita Falls"," TX",516,298,24,8
+"Victoria"," TX",574,352,46,18
+"Bryan"," TX",579,317,64,34
+"San Angelo"," TX",584,323,35,17
+"Waco"," TX",720,261,60,24
+"Beaumont"," TX",908,421,114,43
+"Abilene"," TX",980,565,127,68
+"Temple"," TX",985,390,162,50
+"Odessa"," TX",1014,543,101,38
+"Corpus Christi"," TX",1135,357,167,38
+"Harlingen"," TX",1145,536,120,44
+"Amarillo"," TX",1236,678,194,79
+"Tyler"," TX",1338,527,224,127
+"Lubbock"," TX",1811,922,298,85
+"McAllen"," TX",1938,849,350,133
+"El Paso"," TX",2086,753,274,51
+"Austin"," TX",2775,1003,393,161
+"Fort Worth"," TX",4200,1400,501,187
+"San Antonio"," TX",6234,2477,747,216
+"Dallas"," TX",10585,3679,1292,450
+"Houston"," TX",14062,5130,1790,652
+"Ogden"," UT",750,371,110,42
+"Provo"," UT",941,387,122,52
+"Salt Lake City"," UT",3999,1804,526,277
+"Newport News"," VA",905,251,145,45
+"Winchester"," VA",1051,357,84,22
+"Lynchburg"," VA",1174,309,55,20
+"Charlottesville"," VA",1326,433,155,35
+"Roanoke"," VA",2189,593,272,113
+"Norfolk"," VA",2543,782,276,82
+"Arlington"," VA",3116,995,450,173
+"Richmond"," VA",4478,1488,465,144
+"Burlington"," VT",1743,587,117,65
+"Yakima"," WA",369,200,58,33
+"Olympia"," WA",558,173,84,25
+"Everett"," WA",951,319,83,26
+"Tacoma"," WA",1388,366,197,62
+"Spokane"," WA",3652,1657,355,134
+"Seattle"," WA",4700,1366,651,209
+"Wausau"," WI",403,152,72,45
+"Neenah"," WI",447,262,46,25
+"Appleton"," WI",448,222,72,37
+"La Crosse"," WI",650,286,78,44
+"Marshfield"," WI",706,281,68,34
+"Green Bay"," WI",990,498,112,43
+"Madison"," WI",2443,838,267,121
+"Milwaukee"," WI",5263,2207,818,323
+"Morgantown"," WV",1555,499,155,40
+"Huntington"," WV",1561,382,162,64
+"Charleston"," WV",2620,1167,284,97
+"Casper"," WY",633,378,32,20
