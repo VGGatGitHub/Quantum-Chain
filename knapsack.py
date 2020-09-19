@@ -124,12 +124,12 @@ def solve_nodes(nodes: List, values: List, status: List, total_capacity: int,
     """
     sum_status=sum(status)
     if sum_status < total_capacity:
-        print("Warning while solveing: Total utilized capacity needed {%} is less "
-              + "than total capacity {%}. There's no knapsack problem to solve!",
-              %(sum_status,total_capacity))
 
-    bqm = knapsack_bqm(nodes, values, status, total_capacity,
-                       value_r=value_r, weight_r=weight_r)
+        print(f"Warning while solveing: Total utilized capacity needed {sum_status} is less ",
+              f"than total capacity {total_capacity}. There's no knapsack problem to solve!")
+
+    bqm = knapsack_bqm(nodes, values, status, total_capacity, value_r=value_r, weight_r=weight_r)
+
     sampler = LeapHybridSampler()
     samplesets = [sampler.sample(bqm) for _ in range(num_reads)]
 
@@ -149,31 +149,47 @@ def solve_nodes(nodes: List, values: List, status: List, total_capacity: int,
         solution_set.append({
             'open_cities': open_cities,
             'closed_cities': closed_cities,
-            'solution indicator': sampleset.first.energy,
+            'solution_indicator': sampleset.first.energy,
             'total_value': sum(df.loc[open_cities]['value']) + sum(df.loc[closed_cities]['value']) * value_r,
             'used_capacity': int(round(sum(df.loc[open_cities]['status'])))
         })
 
-    # do sorting from lowest to highest energy
+    # do sorting from lowest to highest energy (solution_indicator)
     if num_reads > 1:
-        energies = [solution['energy'] for solution in solution_set]
+        energies = [solution['solution_indicator'] for solution in solution_set]
         solution_set = [x for _, x in sorted(zip(energies, solution_set))]
 
     if verbose:
-        print('BEST SOLUTION')
-        print('Involved nodes [1]')
+        print('\nBEST SOLUTION\n')
+        print('nodes in the knapsack:')
         print(solution_set[0]['open_cities'])
         print('\n')
-        print('Other nodes [0]')
+        print('nodes outside the knapsack:')
         print(solution_set[0]['closed_cities'])
         print('\n')
         total_value = sum(df['value'])
         solutin_value = solution_set[0]['total_value']
         print(
-            f'Total GDP: {total_value} ({(100*solutin_value/total_value):.1f}%)')
+            f'Total Impact Value: {total_value} ({(100*solutin_value/total_value):.1f}%)')
         used_capacity = solution_set[0]['used_capacity']
         print(
-            f'Used up hospital capacity: {used_capacity:d} of {total_capacity} ({(100*used_capacity/total_capacity):.1f}%)')
+            f'Used up capacity: {used_capacity:d} of {total_capacity} ({(100*used_capacity/total_capacity):.1f}%)')
+
+        if num_reads > 1:
+            print('\nNEXT BEST SOLUTION\n')
+            print('nodes in the knapsack:')
+            print(solution_set[1]['open_cities'])
+            print('\n')
+            print('nodes outside the knapsack:')
+            print(solution_set[1]['closed_cities'])
+            print('\n')
+            total_value = sum(df['value'])
+            solutin_value = solution_set[1]['total_value']
+            print(
+                f'Total Impact Value: {total_value} ({(100*solutin_value/total_value):.1f}%)')
+            used_capacity = solution_set[1]['used_capacity']
+            print(
+                f'Used up capacity: {used_capacity:d} of {total_capacity} ({(100*used_capacity/total_capacity):.1f}%)')
 
     return solution_set
 
@@ -188,12 +204,13 @@ def solve_nodes_using_csv(filepath: str, total_capacity: int, value_r=0, weight_
     df = pd.read_csv(filepath)
     
     #VGG update to the new data format of node, capacity, status
+    assert ','.join(df.columns) == 'node,value,status', "Ensure csv header is node,value,status"
+
     #assert ','.join(df.columns) == 'city,gdp,sick', "Ensure csv header is city,gdp,sick"
     #solution_set = solve_cities(list(df['city']), list(df['gdp']), list(df['sick']), total_capacity, 
     
-    solution_set = solve_nodes(list(df['node']), list(df['capacity']), list(df['value']),  
-    	list(df['status']), total_capacity, 
-    	value_r=value_r, weight_r=weight_r, num_reads=num_reads, verbose=verbose)
+    solution_set = solve_nodes(list(df['node']), list(df['value']), list(df['status']), #list(df['capacity']),
+        total_capacity, value_r=value_r, weight_r=weight_r, num_reads=num_reads, verbose=verbose)
     
     return solution_set
 
