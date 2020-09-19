@@ -66,6 +66,7 @@ def knapsack_bqm(cities, values, weights, total_capacity, value_r=0, weight_r=0)
 
     # Q-Alpha - calculate the extra constant in second part of problem hamiltonian
     C = sum([weight * weight_r for weight in weights])
+    
     # Q-Alpha - change weights to weight*(1-weight_r)
     weights = [weight*(1-weight_r) for weight in weights]
 
@@ -201,13 +202,21 @@ def solve_nodes_using_csv(filepath: str, total_capacity: int, value_r=0, weight_
     cities, gdps, and sick people where the cvs file needs to have the header: city, gdp, sick;
     In general the format will be: nodes,capacity,value,status; #VGG
     """
-    df = pd.read_csv(filepath)
+    df0 = pd.read_csv(filepath)
     
     #VGG update to the new data format of node, capacity, status
-    assert ','.join(df.columns) == 'node,value,status', "Ensure csv header is node,value,status"
+    #assert ','.join(df.columns) == 'node,value,status', "Ensure csv header is node,value,status"
 
     #assert ','.join(df.columns) == 'city,gdp,sick', "Ensure csv header is city,gdp,sick"
     #solution_set = solve_cities(list(df['city']), list(df['gdp']), list(df['sick']), total_capacity, 
+    
+    #"City","State","Total","Available","ICUs","Available_ICU"
+    df = pd.DataFrame()
+	df['node']=df0['City']
+	df['status']=abs(df0['ICUs']-df0['Available_ICU']) #number of sick people in the ICU
+	df['value']=df0['ICUs']//5 +abs(df0['Total']-df0['Available']-df0['ICUs'])//10
+	
+    #VGG note the weight_r has to be selected so that the over all number of sick people is under the max. value
     
     solution_set = solve_nodes(list(df['node']), list(df['value']), list(df['status']), #list(df['capacity']),
         total_capacity, value_r=value_r, weight_r=weight_r, num_reads=num_reads, verbose=verbose)
@@ -233,10 +242,11 @@ def main():
     args = parser.parse_args()
     
     solution_set = solve_nodes_using_csv(
-        args.data, args.total_capacity, value_r=0.8, weight_r=0.2, 
+        args.data, args.total_capacity, value_r=0.01, weight_r=0.02, 
         num_reads=args.num_reads, verbose=True) 
         #see the function knapsack_bqm for details 
-        #for GDP use value_r=.8, weight_r=0.2,
+        #for GDP use value_r=.8, weight_r=0.2
+        #VGG note the weight_r has to be selected so that the over all number of sick people is under the max. value
 
 
 if __name__ == '__main__':
