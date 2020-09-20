@@ -217,8 +217,8 @@ def solve_nodes_using_csv(filepath: str, total_capacity: int, value_r=0, weight_
     df1 = pd.DataFrame()
     df1['node']=df0['City']
     #df1['status']=abs(df0['ICUs']-df0['Available_ICU']) #number of sick people in the ICU
-    df1['status']=(5*df0['ICUs']//5 +5*abs(df0['Total']-df0['Available']-df0['ICUs'])//10) #assume medical team of 5
-    df1['value']=((df0['ICUs']//5 +abs(df0['Total']-df0['Available']-df0['ICUs'])//10)*85)//100 #assume 85% vaccine efficiency
+    df1['status']=(df0['ICUs']//5 +abs(df0['Total']-df0['Available']-df0['ICUs'])//10) #assume medical team of 5
+    df1['value']=(5*(df0['ICUs']//5 +abs(df0['Total']-df0['Available']-df0['ICUs'])//10)) #assume 100% vaccine efficiency
 	
     df=df1[0:100] #consider 100 cities
 
