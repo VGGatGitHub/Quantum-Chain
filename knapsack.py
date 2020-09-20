@@ -15,8 +15,10 @@ from math import log, ceil
 import argparse
 
 import pandas as pd
-from dwave.system import LeapHybridSampler
+#from dwave.system import LeapHybridSampler
 import dimod
+import neal
+
 
 
 def knapsack_bqm(cities, values, weights, total_capacity, value_r=0, weight_r=0):
@@ -131,7 +133,8 @@ def solve_nodes(nodes: List, values: List, status: List, total_capacity: int,
 
     bqm = knapsack_bqm(nodes, values, status, total_capacity, value_r=value_r, weight_r=weight_r)
 
-    sampler = LeapHybridSampler()
+    #VGG sampler = LeapHybridSampler()
+    sampler = neal.SimulatedAnnealingSampler()
     samplesets = [sampler.sample(bqm) for _ in range(num_reads)]
 
     df = pd.DataFrame({'node': nodes, 'value': values, 'status': status})
@@ -171,7 +174,7 @@ def solve_nodes(nodes: List, values: List, status: List, total_capacity: int,
         total_value = sum(df['value'])
         solutin_value = solution_set[0]['total_value']
         print(
-            f'Total Impact Value: {total_value} ({(100*solutin_value/total_value):.1f}%)')
+              f'Total Impact Value: {solutin_value} of {total_value} ({(100*solutin_value/total_value):.1f}%)')
         used_capacity = solution_set[0]['used_capacity']
         print(
             f'Used up capacity: {used_capacity:d} of {total_capacity} ({(100*used_capacity/total_capacity):.1f}%)')
@@ -187,7 +190,7 @@ def solve_nodes(nodes: List, values: List, status: List, total_capacity: int,
             total_value = sum(df['value'])
             solutin_value = solution_set[1]['total_value']
             print(
-                f'Total Impact Value: {total_value} ({(100*solutin_value/total_value):.1f}%)')
+                f'Total Impact Value: {solutin_value} of {total_value} ({(100*solutin_value/total_value):.1f}%)')
             used_capacity = solution_set[1]['used_capacity']
             print(
                 f'Used up capacity: {used_capacity:d} of {total_capacity} ({(100*used_capacity/total_capacity):.1f}%)')
@@ -211,11 +214,14 @@ def solve_nodes_using_csv(filepath: str, total_capacity: int, value_r=0, weight_
     #solution_set = solve_cities(list(df['city']), list(df['gdp']), list(df['sick']), total_capacity, 
     
     #"City","State","Total","Available","ICUs","Available_ICU"
-    df = pd.DataFrame()
-	df['node']=df0['City']
-	df['status']=abs(df0['ICUs']-df0['Available_ICU']) #number of sick people in the ICU
-	df['value']=df0['ICUs']//5 +abs(df0['Total']-df0['Available']-df0['ICUs'])//10
+    df1 = pd.DataFrame()
+    df1['node']=df0['City']
+    #df1['status']=abs(df0['ICUs']-df0['Available_ICU']) #number of sick people in the ICU
+    df1['status']=5*df0['ICUs']//5 +10*abs(df0['Total']-df0['Available']-df0['ICUs'])//10
+    df1['value']=df0['ICUs']//5 +abs(df0['Total']-df0['Available']-df0['ICUs'])//10
 	
+    df=df1[0:100]
+
     #VGG note the weight_r has to be selected so that the over all number of sick people is under the max. value
     
     solution_set = solve_nodes(list(df['node']), list(df['value']), list(df['status']), #list(df['capacity']),
