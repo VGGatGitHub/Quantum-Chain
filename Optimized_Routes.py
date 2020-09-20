@@ -13,7 +13,10 @@
 # limitations under the License.
 
 from dwave_qbsolv import QBSolv
-from dwave.system import LeapHybridSampler
+
+#VGG from dwave.system import LeapHybridSampler
+import neal #VGG
+
 import numpy as np
 import matplotlib.pyplot as plt
 import re
@@ -127,6 +130,7 @@ def cluster_points(scattered_points, filename):
 
 # Submit problem to D-Wave sampler
     sampler = EmbeddingComposite(DWaveSampler(solver={'qpu': True}))
+    #sampler = neal.SimulatedAnnealingSampler()
     sampleset = sampler.sample(bqm, chain_strength=4, num_reads=1000)
     best_sample = sampleset.first.sample
 
@@ -338,7 +342,8 @@ for color, points in citygroups.items():
         #resp = QBSolv().sample_qubo(Q)
 
         # Use LeapHybridSampler() for faster QPU access
-        sampler = LeapHybridSampler()
+        #VGG sampler = LeapHybridSampler()
+        sampler = neal.SimulatedAnnealingSampler()
         resp = sampler.sample_qubo(Q)
 
         # First solution is the lowest energy solution found
