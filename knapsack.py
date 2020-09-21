@@ -1,3 +1,5 @@
+#to test the code run:> python ./knapsack.py -d H_Beds.csv -t 150000 -n 3 
+ 
 #node can be a city, hospital, distribution center, store, or etc.
 
 #capacity is the maximum content that can be allocated at the node
@@ -255,6 +257,7 @@ def main():
         #for GDP use value_r=.8, weight_r=0.2
         #VGG note the weight_r has to be selected so that the over all number of sick people is under the max. value
 
+#to test the code run:> python ./knapsack.py -d H_Beds.csv -t 150000 -n 3 
 
 if __name__ == '__main__':
     main()
